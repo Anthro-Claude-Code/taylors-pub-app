@@ -77,7 +77,7 @@ export default function Search() {
 
         {/* Trail spotlight */}
         {filter === "all" && q === "" && (
-          <Link href="/trails/brontë-and-rails" className="mt-4 block">
+          <Link href="/trails/bronte-and-rails" className="mt-4 block">
             <div className="rounded-2xl p-4 bg-gradient-to-br from-[color:var(--color-amber)] to-[color:var(--color-amber-soft)] text-white relative overflow-hidden">
               <div className="absolute top-2 right-3 text-4xl opacity-30">🚂</div>
               <div className="text-[11px] uppercase tracking-[0.18em] opacity-90">Featured trail</div>

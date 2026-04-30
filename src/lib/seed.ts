@@ -125,7 +125,7 @@ export const PUBS: Pub[] = [
       { beer: "knowle-spring", hoursAgo: 1 },
     ],
     liveCount: 14,
-    trail: "brontë-and-rails",
+    trail: "bronte-and-rails",
   },
   {
     id: "woolly-sheep-skipton",
@@ -308,7 +308,7 @@ export const PUBS: Pub[] = [
       { beer: "golden-best", hoursAgo: 3 },
     ],
     liveCount: 9,
-    trail: "brontë-and-rails",
+    trail: "bronte-and-rails",
   },
   {
     id: "grouse-oldfield",
@@ -353,7 +353,7 @@ export const PUBS: Pub[] = [
       { beer: "knowle-spring", hoursAgo: 4 },
     ],
     liveCount: 11,
-    trail: "brontë-and-rails",
+    trail: "bronte-and-rails",
   },
   {
     id: "white-horse-thornton",
@@ -420,7 +420,7 @@ export const PUBS: Pub[] = [
       { beer: "boltmaker", hoursAgo: 5 },
     ],
     liveCount: 12,
-    trail: "brontë-and-rails",
+    trail: "bronte-and-rails",
   },
   {
     id: "inn-cheltenham-parade",
@@ -450,12 +450,12 @@ export const pubById = (id: string) => PUBS.find((p) => p.id === id);
 
 export const TRAILS: Trail[] = [
   {
-    id: "brontë-and-rails",
+    id: "bronte-and-rails",
     name: "Brontë & Rails Trail",
     description:
       "Four pubs along the Keighley & Worth Valley Railway through Brontë Country. Collect a stamp at each for a free Landlord and a limited 'Brontë & Rails' pin badge.",
     pubIds: ["fleece-haworth", "old-parcels-keighley", "dog-gun-oxenhope", "new-inn-cononley"],
-    rewardId: "trail-brontë-and-rails",
+    rewardId: "trail-bronte-and-rails",
     image: "🚂",
   },
 ];
@@ -503,12 +503,12 @@ export const REWARDS: Reward[] = [
     ageRestricted: true,
   },
   {
-    id: "trail-brontë-and-rails",
+    id: "trail-bronte-and-rails",
     kind: "trail-stamp",
     title: "Brontë & Rails completion reward",
     subtitle: "Free Landlord + limited pin badge",
     description: "Awarded automatically when you check in at all four trail pubs.",
-    trail: "brontë-and-rails",
+    trail: "bronte-and-rails",
     shareable: false,
     ageRestricted: true,
   },
