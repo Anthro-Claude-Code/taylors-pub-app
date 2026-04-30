@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tt-app",
+      "runtimeExecutable": "/Users/jhawkins/.nvm/versions/node/v20.20.2/bin/npm",
+      "runtimeArgs": ["--prefix", "/Users/jhawkins/projects/taylors-pub-app", "run", "dev"],
+      "port": 3000
+    }
+  ]
+}

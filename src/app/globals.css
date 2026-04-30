@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
+@theme {
+  /* Timothy Taylor's heritage palette */
+  --color-cream: #f5ecd7;
+  --color-cream-50: #fbf6e8;
+  --color-cream-100: #f5ecd7;
+  --color-cream-200: #ecdfbf;
+  --color-paper: #fbf6e8;
+  --color-bottle: #1e4538;
+  --color-bottle-deep: #0f2419;
+  --color-bottle-soft: #2c5b48;
+  --color-gold: #c9a961;
+  --color-gold-soft: #e0c889;
+  --color-gold-deep: #a3853d;
+  --color-amber: #b86e1f;
+  --color-amber-soft: #d99656;
+  --color-ink: #1a1b1a;
+  --color-ink-soft: #4b4f4a;
+  --color-ink-mute: #7a7e76;
+  --color-line: #e2d8bf;
+  --color-line-soft: #ede4cc;
+  --color-success: #4a7c59;
+  --color-warn: #c8881a;
+  --color-danger: #9b3232;
+
+  --font-serif: var(--font-serif-var), "Playfair Display", "Times New Roman", serif;
+  --font-sans: var(--font-sans-var), "Inter", system-ui, -apple-system, sans-serif;
+
+  --radius-card: 1rem;
+  --radius-pill: 999px;
+
+  --shadow-pump: 0 1px 0 rgba(15, 36, 25, 0.06), 0 8px 24px -12px rgba(15, 36, 25, 0.18);
+  --shadow-stamp: inset 0 0 0 2px rgba(30, 69, 56, 0.18), 0 1px 0 rgba(15, 36, 25, 0.05);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html, body {
+  background: var(--color-cream);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+/* Subtle paper texture for the heritage feel */
+.paper-texture {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(rgba(30, 69, 56, 0.045) 1px, transparent 1px),
+    radial-gradient(rgba(201, 169, 97, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px, 13px 13px;
+  background-position: 0 0, 11px 11px;
+}
+
+.card-bevel {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+}
+
+/* Barley wheat stylized line divider */
+.barley-divider {
+  height: 12px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 12'><g fill='none' stroke='%23c9a961' stroke-width='1' stroke-linecap='round'><path d='M2 6h22'/><path d='M56 6h22'/><circle cx='40' cy='6' r='2.4' fill='%23c9a961' stroke='none'/><path d='M34 6l-3-3M34 6l-3 3M46 6l3-3M46 6l3 3'/></g></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80px 12px;
+}
+
+.pump-clip {
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.18), transparent 60%),
+              linear-gradient(180deg, #1e4538, #0f2419);
+}
+
+.qr-frame {
+  background: white;
+  border: 1px solid #e2d8bf;
+  box-shadow: inset 0 0 0 2px rgba(30, 69, 56, 0.18);
+}
+
+@keyframes flicker {
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.04); }
+}
+.flame { animation: flicker 1.4s ease-in-out infinite; transform-origin: bottom center; }
+
+@keyframes stamp {
+  0% { transform: scale(1.3) rotate(-8deg); opacity: 0; }
+  60% { transform: scale(0.9) rotate(-2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(-3deg); opacity: 1; }
+}
+.stamp-press { animation: stamp 0.6s cubic-bezier(0.2, 0.9, 0.3, 1.4) both; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.hairline { box-shadow: inset 0 0 0 1px #e2d8bf; }
+
+.tab-active {
+  background: #1e4538;
+  color: #f5ecd7;
+}
+
+@keyframes ttpulse {
+  0% { box-shadow: 0 0 0 0 rgba(184, 110, 31, 0.55); }
+  70% { box-shadow: 0 0 0 8px rgba(184, 110, 31, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(184, 110, 31, 0); }
+}
+.live-pulse { animation: ttpulse 1.8s infinite; }
+
+/* Confetti foam burst for redemption */
+@keyframes foamPop {
+  0% { transform: translateY(0) scale(0.4); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(-60px) scale(1.2); opacity: 0; }
+}
+.foam-bubble { animation: foamPop 1.4s ease-out both; }
