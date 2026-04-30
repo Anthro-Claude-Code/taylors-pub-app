@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   title: "Timothy Taylor's — Find a Pint",
   description:
     "Find Timothy Taylor's pubs, earn points, learn about cask ale, and stamp your beer passport.",
+  authors: [{ name: "Ciara Cherry" }],
+  creator: "Ciara Cherry",
+  applicationName: "Timothy Taylor's app",
+  other: {
+    "copyright": "© Ciara Cherry 2026 — All rights reserved",
+  },
 };
 
 export const viewport: Viewport = {

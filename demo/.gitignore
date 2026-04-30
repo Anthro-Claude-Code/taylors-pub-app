@@ -1,0 +1,5 @@
+# Build artifacts (regenerate locally)
+*.pdf
+*.png
+slide_*.jpg
+node_modules/

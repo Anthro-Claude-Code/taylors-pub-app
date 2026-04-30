@@ -3,6 +3,7 @@ import { useApp } from "@/lib/state";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { BottomNav } from "@/components/BottomNav";
+import { IPMark } from "@/components/IPMark";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { state, hydrated } = useApp();
@@ -13,7 +14,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col paper-texture">
-      <main className="flex-1 max-w-md w-full mx-auto pb-2">{children}</main>
+      <main className="flex-1 max-w-md w-full mx-auto pb-2">
+        {children}
+        <IPMark />
+      </main>
       <BottomNav />
     </div>
   );

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useApp } from "@/lib/state";
 import { BarleyCrest } from "@/components/Logo";
 import { PrimaryButton, SecondaryButton, BarleyDivider } from "@/components/Pieces";
+import { IPMark } from "@/components/IPMark";
 
 type Step = "welcome" | "age" | "name" | "ready";
 
@@ -49,6 +50,9 @@ export default function Onboarding() {
           <NameStep name={name} setName={setName} onContinue={() => setStep("ready")} onBack={() => setStep("age")} />
         )}
         {step === "ready" && <Ready onFinish={finish} />}
+        <div className="mt-auto pt-8">
+          <IPMark />
+        </div>
       </div>
     </div>
   );
