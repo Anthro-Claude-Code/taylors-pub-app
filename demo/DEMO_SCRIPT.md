@@ -3,7 +3,22 @@
 **Live URL:** https://taylors-pub-app.vercel.app
 **Open on your phone, share screen if remote.**
 
-> Before you start: open the app, go to **Settings → Reset demo data**, then walk through onboarding once with name "Ciara" and any DOB ≥ 18. This gives you the seeded 1,250 pts and 3 sample stamps so the demo never starts empty.
+---
+
+## ⚠️ STEP 0 — Do this 5 minutes before you walk in
+
+**This is the most important step. If you skip it the app will look empty.**
+
+- [ ] Open https://taylors-pub-app.vercel.app on your phone
+- [ ] If you've used the app before: tap the **profile circle** (top right) → **Settings** → **Reset demo data** → confirm
+- [ ] You'll land back on the welcome screen — walk through onboarding:
+  - [ ] Tap **Get started**
+  - [ ] Enter any date of birth that's 18+ (e.g. 1 Jan 2000), tap **Continue**
+  - [ ] Type your name **Ciara**, tap **Continue**, then **Pour me a pint**
+- [ ] You should now be on **Home** showing **1,250 pts** and a **3-week streak** — that proves the seed loaded ✅
+- [ ] Phone fully charged + on do-not-disturb
+- [ ] Slides open on the laptop, this script open on a second device (or printed)
+- [ ] Take a deep breath — this is genuinely good work
 
 ---
 
@@ -209,18 +224,6 @@
 | "Notifications?" | Tap the **bell icon** top-right (3 seeded notifications: cask freshness, streak, friend) |
 | "What if Vercel is offline mid-demo?" | The whole app is in `localStorage` — say "this would normally use a real backend; for the demo it's all client-side, which is also why your data persists between visits without a login" |
 | "Did you really build this yourself?" | "I designed every screen, made every product decision, and pair-coded the build with Claude — same way modern engineering teams already work. The killer features — cask freshness, DD mode, round mode — are mine." |
-
----
-
-## Pre-demo checklist (5 mins before)
-
-- [ ] Phone fully charged + on do-not-disturb
-- [ ] Open https://taylors-pub-app.vercel.app on the phone
-- [ ] Settings → **Reset demo data**, walk through onboarding (DOB ≥ 18, name "Ciara")
-- [ ] Confirm Home shows 1,250 pts and 3-week streak — that proves the seed loaded
-- [ ] Open the slides on the laptop
-- [ ] Have this script open on a second device (laptop or paper)
-- [ ] Take a deep breath — this is genuinely good work
 
 ---
 
